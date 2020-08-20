@@ -52,20 +52,23 @@ func Task2() {
     fmt.Print("Отправляемся с остановки ", busStop [busStopNumber], ". В салоне пассажиров:", passengersTotal, "\n")
 
   }
-  
-  allMoney  := allPassengersIn * 20 //Всего денег
-  
-  salary    := allMoney / 4 //Зарплата водителя
-  fuel      := allMoney / 5 //Расходы на топливо
-  taxes     := allMoney / 5 //Налоги
-  repair    := allMoney / 5 //Расходы на ремонт машины
-  
-  fmt.Println("\n", "==========================", "\n")
-  fmt.Println("\n", "Всего заработали:", allMoney ,"руб.")
-  fmt.Println("\n", "Зарплата водителя:", salary ,"руб.")
-  fmt.Println("\n", "Расходы на топливо:", fuel ,"руб.")
-  fmt.Println("\n", "Налоги:", taxes ,"руб.")
-  fmt.Println("\n", "Расходы на ремонт машины:", repair ,"руб.")
-  fmt.Println("\n", "Итого доход:", allMoney - salary - fuel - taxes - repair ,"руб.")
+  if allPassengersIn > 0 {
+    allMoney  := allPassengersIn * 20 //Всего денег
+    
+    salary    := allMoney / 4 //Зарплата водителя
+    fuel      := allMoney / 5 //Расходы на топливо
+    taxes     := allMoney / 5 //Налоги
+    repair    := allMoney / 5 //Расходы на ремонт машины
+    
+    fmt.Println("\n", "==========================")
+    fmt.Println("\n", "Всего заработали:", allMoney ,"руб.")
+    fmt.Println("\n", "Зарплата водителя:", salary ,"руб.")
+    fmt.Println("\n", "Расходы на топливо:", fuel ,"руб.")
+    fmt.Println("\n", "Налоги:", taxes ,"руб.")
+    fmt.Println("\n", "Расходы на ремонт машины:", repair ,"руб.")
+    fmt.Println("\n", "Итого доход:", allMoney - salary - fuel - taxes - repair ,"руб.")
+  } else {
+    fmt.Println("дохода не было!")
+  }
 
 }
